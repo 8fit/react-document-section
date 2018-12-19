@@ -36,6 +36,6 @@ export const DocumentOutlineSection = ({ title, children }) => (
 )
 
 DocumentOutlineSection.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.node,
   children: PropTypes.node
 }

@@ -1,6 +1,6 @@
 {
   "name": "react-document-section",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Modular creation of the document outline by automating heading level assignment with React components",
   "author": "8fit",
   "license": "MIT",

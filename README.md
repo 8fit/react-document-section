@@ -13,7 +13,7 @@ In modern web development we build pages modularly by using components. However,
 `react-document-section` provides two components:
 
 * `DocumentOutlineSection` is the component with which you specify the nesting level. Wrap everything that should be part of a section in this component.
-  * `title` (String) Specify the title of the section as a property of `DocumentOutlineSection`. Be aware however that you need an `H` component to display this title.
+  * `title` (node) Specify the title of the section as a property of `DocumentOutlineSection`. Be aware however that you need an `H` component to display this title.
 * `H` is the component which displays the title specified in `DocumentOutlineSection`. It's a universal alternative to `h1` - `h6`. Any properties you set in this component are set as attributes of the actual `h1` – `h6` element.
 
 ## Install
@@ -67,3 +67,20 @@ Would result in this render output:
 ```
 
 You can nest the `DocumentOutlineSection` in arbitrary depth.
+
+## Running this repo
+
+If you want to check out this repository and run it yourself this is how you do it
+
+Run Rollup to watch your changes in `src/`.
+
+```bash
+npm start
+```
+
+In another tab start the dev server of the example app.
+
+```bash
+cd example
+npm start
+```
