@@ -6,6 +6,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
+    'plugin:jest/recommended',
     'plugin:prettier/recommended',
     'prettier/react',
     'prettier/@typescript-eslint',
@@ -13,7 +14,6 @@ module.exports = {
   env: { es6: true, node: true, browser: false },
   plugins: ['@typescript-eslint', 'jest', 'react', 'prettier'],
   rules: {
-    'react/jsx-boolean-value': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     'prettier/prettier': 'warn',
   },
