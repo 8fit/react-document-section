@@ -9,7 +9,7 @@ import React, {
 } from 'react'
 import PropTypes from 'prop-types'
 
-export interface DocumentOutlineSectionContext {
+interface DocumentOutlineSectionContext {
   level: number
   title: ReactNode
 }
