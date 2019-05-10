@@ -13,17 +13,19 @@ const HeadingContext = createContext<{ level: number; title: ReactNode }>({
   title: '',
 })
 
-export const H = forwardRef<HTMLHeadingElement>((props, ref) => (
+type HeadingProps = DetailedHTMLProps<
+  HTMLAttributes<HTMLHeadingElement>,
+  HTMLHeadingElement
+>
+
+export const H = forwardRef<HTMLHeadingElement, HeadingProps>((props, ref) => (
   <HeadingContext.Consumer>
     {({ title, level }) => {
       if (!level || isNaN(level)) {
         return null
       }
 
-      const tagProps: DetailedHTMLProps<
-        HTMLAttributes<HTMLHeadingElement>,
-        HTMLHeadingElement
-      > = { ref, children: title, ...props }
+      const tagProps: HeadingProps = { ref, children: title, ...props }
 
       return createElement(`h${Math.min(level, 6)}`, tagProps)
     }}
