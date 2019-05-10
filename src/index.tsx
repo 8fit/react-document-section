@@ -7,19 +7,8 @@ import React, {
   DetailedHTMLProps,
   createElement,
 } from 'react'
-import PropTypes from 'prop-types'
 
-interface DocumentOutlineSectionContext {
-  level: number
-  title: ReactNode
-}
-
-export interface DocumentOutlineSectionProps {
-  title: ReactNode
-  children: ReactNode
-}
-
-const HeadingContext = createContext<DocumentOutlineSectionContext>({
+const HeadingContext = createContext<{ level: number; title: ReactNode }>({
   level: 0,
   title: '',
 })
@@ -43,6 +32,10 @@ export const H = forwardRef<HTMLHeadingElement>((props, ref) => (
 
 H.displayName = 'DocumentOutlineSectionH'
 
+export interface DocumentOutlineSectionProps {
+  title: ReactNode
+}
+
 export const DocumentOutlineSection: FunctionComponent<
   DocumentOutlineSectionProps
 > = ({ title, children }) => (
@@ -56,8 +49,3 @@ export const DocumentOutlineSection: FunctionComponent<
     )}
   </HeadingContext.Consumer>
 )
-
-DocumentOutlineSection.propTypes = {
-  title: PropTypes.node.isRequired,
-  children: PropTypes.node,
-}
