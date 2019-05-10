@@ -41,7 +41,7 @@ export const H = forwardRef<HTMLHeadingElement>((props, ref) => (
   </HeadingContext.Consumer>
 ))
 
-H.displayName = 'DocumentOutlineSectionHeading'
+H.displayName = 'DocumentOutlineSectionH'
 
 export const DocumentOutlineSection: FunctionComponent<
   DocumentOutlineSectionProps

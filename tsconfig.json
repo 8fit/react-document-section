@@ -1,35 +1,29 @@
 {
   "compilerOptions": {
-    "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "baseUrl": "./",
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
+    "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
     "lib": ["esnext", "dom"],
-    "module": "esnext",
     "moduleResolution": "node",
-    "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noStrictGenericChecks": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "outDir": "dist/",
     "pretty": true,
-    "resolveJsonModule": true,
-    "rootDir": "./",
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
     "strictFunctionTypes": true,
     "strictNullChecks": true,
-    "target": "esnext",
-    "isolatedModules": true
+    "target": "esnext"
   },
   "include": ["./src/**/*"],
-  "exclude": ["node_modules", "dist", "example"]
+  "exclude": ["node_modules", "dist", "example", "**/*.test.*"]
 }

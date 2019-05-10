@@ -1,7 +1,7 @@
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: { sourceType: 'module' },
-  settings: { react: 'detect' },
+  settings: { react: { version: 'detect' } },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
